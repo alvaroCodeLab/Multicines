@@ -6,7 +6,6 @@
 ![CSS3](https://img.shields.io/badge/CSS3-Styling-blueviolet)
 ![HTML5](https://img.shields.io/badge/HTML5-Markup-red)
 ![Status](https://img.shields.io/badge/Status-En%20desarrollo-green)
-![License](https://img.shields.io/badge/License-Acad%C3%A9mica-lightgrey)
 
 Aplicación web para la **gestión integral de un complejo multicine**, desarrollada con **JavaScript, PHP y CSS**, que permite administrar cines, salas, películas, pases y venta de entradas, diferenciando funcionalidades según el tipo de usuario.
 
