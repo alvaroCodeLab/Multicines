@@ -161,3 +161,19 @@ Se valora especialmente:
 📚 Proyecto académico – Desarrollo de Aplicaciones Web
 
 ---
+
+## ⚠️ Nota sobre imágenes
+
+<div align="center">
+
+🎨 **Aviso de propiedad intelectual** 🎨  
+
+> ⚠️ **Las imágenes utilizadas en esta aplicación pertenecen a sus respectivos propietarios**  
+> y se emplean **únicamente con fines demostrativos**.  
+> Ninguna imagen se utiliza con fines comerciales ni infringe derechos de autor.  
+
+🖼️ **Gracias por respetar la propiedad intelectual**  
+
+</div>
+
+---
