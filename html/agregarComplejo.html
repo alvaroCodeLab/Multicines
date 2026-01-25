@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Complejo Multicine</title>
+    <link href="../public/website_icon.png" rel="website icon" type="png">
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../estilos/estilosAgregarComplejo.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Gestión de Complejos Multicines</h1>
+        <p>Creación de nuevos complejos en multicines</p>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Crear un Nuevo Complejo</h2>
+        <form id="complejoForm">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre del Cine</label>
+                <input id="nombre" type="text" name="nombre" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="ubicacion" class="form-label">Ubicación del Cine</label>
+                <input id="ubicacion" type="text" name="ubicacion" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="numeroSalas" class="form-label">Número de Salas</label>
+                <input id="numeroSalas" type="number" name="numeroSalas" class="form-control" required>
+            </div>
+
+            <div class="text-center">
+                <button id="btnAgregarComplejo" type="submit" class="btn btn-success">Registrar Complejo</button>
+            </div>
+        </form>
+        <br>
+        <!-- Sección para mostrar mensaje de alerta -->
+        <div id="mensajeComplejo" class="alert" role="alert" style="display:none; opacity: 0; transition: opacity 1s ease-in-out;"></div>
+    </div>
+
+    <script src="../js/agregarComplejo.js"></script>
+</body>
+
+</html>

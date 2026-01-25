@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Entradas Vendidas</title>
+    <link href="../public/website_icon.png" rel="website icon" type="png">
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../estilos/estilosListadoFecha.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header text-center">
+        <h1>Listado de Entradas Vendidas Entre Fechas</h1>
+        <p>Consulta de las entradas vendidas en un rango de fechas por salas y pases.</p>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Consulta por Fechas</h2>
+        <form id="consultaForm">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="fechaInicio" class="form-label">Fecha de Inicio</label>
+                        <input type="date" id="fechaInicio" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="fechaFin" class="form-label">Fecha de Fin</label>
+                        <input type="date" id="fechaFin" class="form-control" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Consultar</button>
+            </div>
+        </form>
+
+        <div id="resultado" class="mt-5">
+            <h3>Resultados:</h3>
+            <table id="tablaEntradas" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Sala</th>
+                        <th>Película</th>
+                        <th>Pase</th>
+                        <th>Entradas Vendidas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se insertarán las filas dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="../js/listadoFecha.js"></script>
+</body>
+
+</html>

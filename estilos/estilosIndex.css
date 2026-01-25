@@ -1,0 +1,241 @@
+/* Fuente general y colores */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    color: #f8f9fa;
+    margin: 0;
+}
+
+/* Header */
+.header {
+    background-color: #111;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.header-logo_cine a {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #f8f9fa;
+    transition: color 0.4s ease-in-out;
+}
+
+.header-logo_cine a:hover {
+    color: #00e6e6;
+}
+
+/* Buscador */
+#buscador_form_cine input[type="text"] {
+    width: 250px;
+    background-color: #222;
+    border: 1px solid #444;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+#buscador_form_cine input[type="text"]::placeholder {
+    color: #bbb;
+}
+
+#buscador_form_cine input[type="text"]:focus {
+    width: 300px;
+    border-color: #00e6e6;
+    box-shadow: 0 0 8px rgba(0, 230, 230, 0.6);
+    background-color: #111;
+}
+
+#buscador_form_cine button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#buscador_form_cine button:hover {
+    background-color: #00e6e6;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Títulos */
+main h2 {
+    font-weight: 700;
+    color: #f8f9fa;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Footer */
+footer {
+    font-size: 0.9rem;
+    background-color: #111;
+    color: #bbb;
+    border-top: 1px solid #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    #buscador_form_cine input[type="text"] {
+        width: 100%;
+    }
+
+    .header-logo_cine a {
+        font-size: 1.6rem;
+    }
+}
+
+/* Estilo para botones de horarios */
+.btn-horario {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: 20px;
+}
+
+.btn-horario:hover {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    transform: scale(1.1);
+}
+
+/* Animación para entrada de tarjetas (sin modificar las tarjetas en sí) */
+#cartelera .col {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+/* Cards de películas */
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 8px rgba(0, 230, 255, 0.7), 0 0 15px rgba(0, 230, 255, 0.5);
+    border: 2px solid rgba(0, 230, 255, 0.7);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;        /* Asegura que ocupe toda la altura disponible */
+    object-fit: cover;    /* La imagen cubrirá el contenedor sin dejar espacio vacío */
+    border-radius: 12px 12px 0 0;
+    display: block;
+    background-color: #f0f0f0;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #212529;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #495057;
+}
+
+/* Horarios */
+.card-body p strong {
+    color: #e83e8c;
+}
+
+/* Loader */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.3rem;
+}
+
+/* Ocultamos el loader una vez que las películas se carguen */
+.loader-hidden {
+    display: none;
+}
+
+/* Estilo para el botón de Cerrar sesión */
+#cerrarSesion {
+    transition: all 0.3s ease; /* Para transiciones suaves */
+    border: 1px solid #ff4b2b; /* Color de borde rojo para destacarlo */
+}
+
+/* Cuando el botón está siendo presionado (clic) */
+#cerrarSesion:active {
+    background-color: #ff4b2b; /* Rojo claro, como los botones de los pases */
+    color: white; /* El texto será blanco para destacarse sobre el rojo */
+    transform: scale(0.98); /* Efecto de "presionado", hace que se achique un poco */
+    box-shadow: 0 4px 15px rgba(255, 75, 43, 0.5); /* Sombra para darle más impacto */
+}
+
+/* Efecto de iluminación cuando el usuario pasa el mouse */
+#cerrarSesion:hover {
+    background-color: #ff4b2b; /* Rojo al pasar el mouse */
+    color: white;
+    transform: scale(1.05); /* Efecto de aumento de tamaño */
+    box-shadow: 0 4px 8px rgba(255, 75, 43, 0.7); /* Sombra para destacar más */
+}
+
+/* Animación de rebote */
+@keyframes rebote {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    70% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Aplica el rebote al presionar el botón */
+#cerrarSesion:active {
+    animation: rebote 0.4s ease-in-out; /* Repite la animación durante 0.4 segundos */
+}

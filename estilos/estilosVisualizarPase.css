@@ -1,0 +1,116 @@
+/* estilosVisualizarPase.css */
+
+/* Estilos personalizados */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d9c5a3; /* Fondo marrón claro */
+    color: #f4f6f9; /* Texto blanco para contraste */
+}
+
+/* Encabezado */
+h2 {
+    color: #ffffff; /* Texto blanco para contraste */
+    font-weight: bold;
+    font-size: 2.5rem; /* Reducir el tamaño del título */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para el título */
+}
+
+/* Tarjetas de los pases */
+.pase {
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #004080; /* Borde azul oscuro */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pase:hover {
+    background-color: #f1f9fc; /* Fondo muy suave al pasar el cursor */
+    cursor: pointer;
+    border-color: #003366; /* Azul más oscuro al hacer hover */
+    transform: translateY(-5px); /* Efecto sutil de elevación */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada al hacer hover */
+}
+
+/* Títulos de cada pase */
+.pase h3 {
+    font-size: 1.6rem; /* Título más pequeño */
+    color: #004080; /* Azul oscuro */
+    margin-top: 0;
+    font-weight: bold; /* Hacerlo negrita */
+}
+
+/* Texto de la tarjeta */
+.pase p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #333;
+}
+
+.pase p strong {
+    font-weight: bold;
+    color: #004080; /* Azul oscuro */
+}
+
+/* Estilo para el nombre del cine */
+.pase .cine {
+    font-size: 0.9rem;
+    color: #b5651d; /* Marrón oscuro para el nombre del cine */
+}
+
+/* Estilo para los selectores */
+.form-select {
+    border: 2px solid #004080; /* Borde azul oscuro */
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+.form-select:focus {
+    border-color: #0066cc; /* Azul más claro cuando se enfoca */
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+}
+
+/* Mensajes de error */
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+/* Estilos adicionales para el contenedor y el fondo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Estilos del formulario */
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #004080; /* Azul oscuro */
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem; /* Reducir el tamaño del título en pantallas pequeñas */
+    }
+
+    .pase {
+        margin-bottom: 15px;
+    }
+
+    .pase h3 {
+        font-size: 1.5rem; /* Reducir tamaño del título de pase */
+    }
+}
+
+

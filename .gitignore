@@ -1,0 +1,56 @@
+# ======================
+# Variables de entorno
+# ======================
+.env
+.env.*
+!.env.example
+
+# ======================
+# Configuración sensible
+# ======================
+config.php
+config/*.php
+
+# ======================
+# Dependencias
+# ======================
+/vendor/
+
+# ======================
+# Logs
+# ======================
+*.log
+logs/
+log/
+
+# ======================
+# Caché / temporales
+# ======================
+cache/
+tmp/
+temp/
+
+# ======================
+# Archivos del sistema
+# ======================
+.DS_Store
+Thumbs.db
+
+# ======================
+# IDE / Editores
+# ======================
+.vscode/
+.idea/
+*.swp
+
+# ======================
+# Archivos de backup
+# ======================
+*.bak
+*.old
+*.backup
+
+# ======================
+# Subidas de usuarios
+# ======================
+uploads/

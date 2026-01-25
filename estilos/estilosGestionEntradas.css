@@ -1,0 +1,91 @@
+/* Estilo general para el cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Fondo claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Título del header en negro */
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000; /* Negro */
+    margin: 0;
+}
+
+/* Estilo para la imagen */
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Formulario */
+form {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #FFF9C4; /* Amarillo suave */
+    color: #000; /* Texto negro para contraste */
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    width: 250px; /* Tamaño uniforme */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Cambio de color y sombra en hover */
+button:hover {
+    background-color: #FFF59D; /* Amarillo más oscuro o diferente tono */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el texto de la sección */
+section p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 30px;
+}
+
+/* Márgenes para los br */
+br {
+    margin-bottom: 10px;
+}
+
+/* Efecto en foco para accesibilidad */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Para dispositivos móviles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    button {
+        width: 100%; /* Los botones ocupan todo el ancho disponible en móviles */
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    img {
+        width: 100%;
+        max-width: 300px;
+    }
+}

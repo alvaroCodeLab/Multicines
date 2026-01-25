@@ -1,0 +1,88 @@
+/* Estilo general para el cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Fondo claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    margin-top: 50px;
+    color: #000; /* Título en color negro */
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000; /* Título en color negro */
+    margin: 0;
+}
+
+/* Estilo para la imagen */
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Formulario */
+form {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #003366;  /* Color azul marino */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    width: 250px; /* Todos los botones tendrán el mismo tamaño */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #001f33; /* Cambio de color cuando el ratón pasa por encima */
+}
+
+/* Estilo para el texto de la sección */
+section p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 30px;
+}
+
+/* Estilos de márgenes para la página */
+br {
+    margin-bottom: 10px;
+}
+
+/* Adicionales para mejorar la accesibilidad y usabilidad */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 51, 102, 0.8); /* Sombra en los botones al hacer foco */
+}
+
+/* Para dispositivos móviles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    button {
+        width: 100%; /* Los botones ocupan el 100% del ancho en dispositivos pequeños */
+        padding: 12px;
+    }
+
+    img {
+        width: 100%;
+        max-width: 300px;
+    }
+}

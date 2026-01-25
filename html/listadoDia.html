@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Entradas Vendidas</title>
+    <link href="../public/website_icon.png" rel="website icon" type="png">
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../estilos/estilosListadoDia.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Listado de Entradas Vendidas</h1>
+        <p>Consulta de entradas vendidas por salas y pases</p>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Selecciona una Fecha</h2>
+        <form id="formListadoDia">
+            <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha</label>
+                <input id="fecha" type="date" name="fecha" class="form-control" required>
+            </div>
+            <div class="text-center">
+                <button id="btnConsultarEntradas" type="submit" class="btn btn-primary">Consultar Entradas</button>
+            </div>
+        </form>
+
+        <div id="resultados" class="mt-4">
+            <!-- Aquí se mostrarán los resultados -->
+        </div>
+    </div>
+
+    <script src="../js/listadoDia.js"></script>
+</body>
+
+</html>

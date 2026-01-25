@@ -1,0 +1,327 @@
+/* estilosPelicula.css - versión tonos oscuros */
+
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    color: #f8f9fa;
+    margin: 0;
+}
+
+header {
+    background-color: #1f2a33;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+footer {
+    background-color: #1f2a33;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.7);
+}
+
+header a {
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #00e6e6; /* acento cyan para links */
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #55ffff;
+}
+
+/* Detalles de la película */
+#detallePelicula {
+    background-color: #1e2a38; /* fondo oscuro azulado */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 230, 230, 0.3); /* sombra con acento cyan */
+    animation: fadeIn 1s ease-in-out;
+    color: #d7dfe3; /* texto claro */
+}
+
+#detallePelicula h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00e6e6; /* título en cian */
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(0, 230, 230, 0.7);
+}
+
+#detallePelicula p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #cfd8dc;
+}
+
+/* Estilos para las tarjetas */
+.card {
+    border-radius: 10px;
+    background-color: #1e2a38; /* fondo oscuro */
+    box-shadow: 0 4px 15px rgba(0, 230, 230, 0.2);
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    animation: bounceIn 0.8s ease;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Pases disponibles */
+.list-group-item {
+    font-size: 1.1rem;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #2a3b4d;
+    color: #cfd8dc;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.list-group-item .badge {
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    padding: 0.4rem 0.8rem; /* Reducir el padding */
+    background-color: #28a745; /* Mantener el color */
+    background-image: linear-gradient(to right, #28a745, #218838);
+    color: #fff;
+}
+
+/* Botón comprar */
+.comprar-btn {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px; /* Menor radio de borde para hacerlo más pequeño */
+    padding: 0.5rem 1.2rem; /* Reducir el padding */
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.comprar-btn:hover {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    transform: scale(1.03); /* Reducir el efecto de escalado */
+    color: #000;
+}
+
+/* Animación para fade-in */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación para tarjetas */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+footer {
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+/* Animación de fade-in */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+.list-group-item.proximamente {
+    background: linear-gradient(135deg, #00e6e6, #008080); /* gradiente cyan/verde */
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-shadow: 0 0 8px rgba(0, 230, 230, 0.8);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0, 230, 230, 0.6);
+    cursor: default;
+    user-select: none;
+    text-align: center; /* Centra el texto */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    display: flex; /* Usamos flexbox */
+    justify-content: center; /* Alinea el texto horizontalmente */
+    align-items: center; /* Alinea el texto verticalmente */
+    height: 100px; /* Asegura que tenga un alto suficiente */
+}
+
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.3rem;
+}
+
+/* Ocultamos el loader una vez que las películas se carguen */
+.loader-hidden {
+    display: none;
+}
+
+/* Buscador */
+#buscador_form_cine input[type="text"] {
+    width: 250px;
+    background-color: #222;
+    border: 1px solid #444;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+#buscador_form_cine input[type="text"]::placeholder {
+    color: #bbb;
+}
+
+#buscador_form_cine input[type="text"]:focus {
+    width: 300px;
+    border-color: #00e6e6;
+    box-shadow: 0 0 8px rgba(0, 230, 230, 0.6);
+    background-color: #111;
+}
+
+#buscador_form_cine button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#buscador_form_cine button:hover {
+    background-color: #00e6e6;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Modal de confirmación de compra */
+.modal-content {
+    background-color: #1e2a38; /* Fondo oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 230, 230, 0.3); /* Sombra cyan */
+    color: #d7dfe3; /* Texto claro */
+}
+
+.modal-header {
+    border-bottom: 2px solid #00e6e6; /* Línea cyan para el encabezado */
+}
+
+.modal-title {
+    color: #00e6e6; /* Título en cian */
+    font-size: 1.5rem; /* Título más grande */
+    font-weight: 700; /* Fuente negrita */
+}
+
+.modal-body p {
+    font-size: 1.1rem;
+    color: #cfd8dc; /* Texto claro */
+}
+
+.modal-body input {
+    background-color: #222; /* Fondo oscuro para el input */
+    color: #fff; /* Texto blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    border: 1px solid #444; /* Borde sutil */
+}
+
+.modal-body input:focus {
+    border-color: #00e6e6; /* Borde cyan al hacer focus */
+    box-shadow: 0 0 8px rgba(0, 230, 230, 0.6); /* Sombra cyan al hacer focus */
+}
+
+.modal-footer {
+    border-top: 2px solid #00e6e6; /* Línea cyan en el pie de modal */
+}
+
+/* Estilo del botón "Confirmar Compra" (color verde) */
+#confirmarCompraBtn {
+    background: linear-gradient(to right, #28a745, #218838); /* Gradiente verde */
+    color: #fff;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+#confirmarCompraBtn:hover {
+    background: linear-gradient(to right, #218838, #28a745); /* Inversión del gradiente en hover */
+    transform: scale(1.05); /* Efecto de escalado */
+}
+
+/* Error de compra */
+#errorCompra {
+    color: #ff6b6b; /* Rojo claro */
+    display: none;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.modal-body input,
+#confirmarCompraBtn {
+    transition: all 0.3s ease;
+}
+
+/* Botón de cerrar (rojo) */
+.modal-header .btn-close {
+    background-color: #ff6b6b; /* Rojo claro */
+    border: 1px solid #ff6b6b; /* Borde rojo */
+    border-radius: 50%; /* Hacerlo redondo */
+}
+
+.modal-header .btn-close:hover {
+    background-color: #ff4c4c; /* Rojo más intenso en hover */
+    border-color: #ff4c4c; /* Borde más intenso en hover */
+}
+
+/* Cambiar el color del botón "Cerrar" en el modal a rojo */
+.modal-footer .btn-secondary {
+    background-color: #dc3545; /* Rojo */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    transition: background-color 0.3s ease;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #c82333; /* Rojo más oscuro en hover */
+}

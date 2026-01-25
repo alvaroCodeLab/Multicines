@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Complejo Multicine</title>
+    <link href="../public/website_icon.png" rel="website icon" type="png">
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="../estilos/estilosVisualizarComplejo.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container my-4">
+        <div class="header text-center">
+            <h1>Visualización de Complejos Multicine</h1>
+            <p>Consulta todos los cines, salas, películas y sus pases disponibles</p>
+        </div>
+
+        <div class="mb-4">
+            <label for="cineSelector" class="form-label">Selecciona un Cine</label>
+            <select id="cineSelector" class="form-select">
+                <!-- Aquí se llenarán los cines dinámicamente -->
+            </select>
+        </div>
+
+        <div id="complejoInfo" class="mb-5">
+            <h3>Información del Complejo</h3>
+            <p id="nombreCine"></p>
+            <p id="ubicacionCine"></p>
+            <p id="numeroSalas"></p>
+        </div>
+
+        <div id="salasInfo">
+            <h4>Salas</h4>
+            <div id="salasList" class="row">
+                <!-- Las salas se llenarán aquí dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/visualizarComplejo.js"></script>
+</body>
+
+</html>

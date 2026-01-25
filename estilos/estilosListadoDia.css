@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f4e1; /* Amarillo claro */
+    color: #5a3d3d; /* Marrón oscuro */
+}
+
+.header {
+    background-color: #f9d384; /* Amarillo cálido */
+    color: #5a3d3d; /* Marrón oscuro */
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #5a3d3d; /* Marrón oscuro */
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th {
+    background-color: #f9d384; /* Amarillo cálido */
+    color: #5a3d3d; /* Marrón oscuro */
+    padding: 12px;
+    text-align: center;
+}
+
+table td {
+    background-color: #fff8e1; /* Amarillo pálido */
+    color: #5a3d3d; /* Marrón oscuro */
+    padding: 12px;
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: #fbe8a6; /* Amarillo suave */
+}
+
+table tr:hover {
+    background-color: #f9d384; /* Amarillo cálido en hover */
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #f9d384; /* Amarillo cálido */
+    border-color: #f9d384; /* Amarillo cálido */
+    color: #5a3d3d; /* Marrón oscuro */
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #f7c14f; /* Amarillo más fuerte */
+    border-color: #f7c14f; /* Amarillo más fuerte */
+}
+
+.form-label {
+    font-weight: bold;
+    color: #5a3d3d; /* Marrón oscuro */
+}
+
+input[type="date"] {
+    background-color: #fff8e1; /* Amarillo pálido */
+    border: 2px solid #5a3d3d; /* Marrón oscuro */
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+input[type="date"]:focus {
+    border-color: #f9d384; /* Amarillo cálido */
+    outline: none;
+    box-shadow: 0 0 5px rgba(249, 211, 132, 0.5); /* Resaltar con amarillo suave */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-muted {
+    color: #5a3d3d;
+}
+
+.total-resumen {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #fff3cd; /* amarillo claro */
+    border: 1px solid #ffeeba;
+    border-radius: 6px;
+    text-align: center;
+    color: #5a3d3d;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+

@@ -1,0 +1,227 @@
+/* Body y fuentes */
+body {
+    background-color: #f4f7fc;  /* Color de fondo más suave */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabecera */
+.header {
+    background-color: #FF6F61;  /* Color vibrante para la cabecera */
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    animation: slideIn 1s ease-out;
+}
+
+.header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.2rem;
+}
+
+/* Títulos y textos */
+h1, h3, h4 {
+    font-weight: 600;
+}
+
+h3, h4 {
+    color: #FF6F61; /* Coloreamos los títulos secundarios */
+}
+
+/* Selector de cine */
+#cineSelector {
+    border-radius: 8px;
+    padding: 12px 20px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    border: 2px solid #FF6F61;
+}
+
+#cineSelector:hover, #cineSelector:focus {
+    background-color: #FFEFEB;
+    outline: none;
+}
+
+/* Tarjetas de cine y salas */
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease;
+    background-color: #ffffff;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FF6F61;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Detalles de los pases */
+#pasesSala p {
+    font-size: 1rem;
+    color: #444;
+}
+
+#pasesSala p:nth-child(odd) {
+    background-color: #F9E8E4;  /* Un tono suave de color */
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* Botones */
+button, .btn {
+    border-radius: 50px;
+    font-weight: 600;
+    padding: 12px 24px;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+button:hover, .btn:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+
+/* Botón de Actualizar */
+#btnActualizar {
+    background-color: #28a745;  /* Botón verde para actualizar */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#btnActualizar:hover {
+    background-color: #218838;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Modales */
+.modal-content {
+    border-radius: 20px;
+}
+
+.modal-header, .modal-footer {
+    border: none;
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Animaciones */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para botones dentro de las tarjetas */
+.card-body button {
+    background-color: #FF6F61;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.card-body button:hover {
+    background-color: #FF4F3A;
+}
+
+/* Estilos para el selector */
+.form-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #FF6F61; /* Color del texto del selector */
+}
+
+/* Personalizar las alertas */
+.alert {
+    background-color: #FFEBE8; /* Fondo suave de alerta */
+    color: #D9534F;  /* Color de texto de alerta */
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card-body p {
+    margin-bottom: 0.4rem;
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.card-body h6 {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.ms-3 {
+    margin-left: 1rem;
+}
+
+
+
