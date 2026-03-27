@@ -1,189 +1,179 @@
-/* estilosLoginyRegistro.css mejorado - versión cine */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-image: url(../public/fondoCineLogin_y_Registro.png);
-    background-size: cover;
-    background-position: center;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+/* Layout principal */
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Panel izquierdo */
+.side-panel {
+    flex: 1;
+    background: linear-gradient(135deg, #ff3d00, #ff7300);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 40px;
+}
+
+.side-panel h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.side-panel p {
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* Panel formulario */
+.form-panel {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
 }
 
-/* Contenedor del formulario como “pantalla de cine” */
-.login-container {
-    background-color: rgba(255, 255, 255, 0.95); /* semitransparente para ver la sala */
-    padding: 40px 30px;
-    border-radius: 20px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+/* Caja tipo glass */
+.login-container,
+.registro-container {
     width: 90%;
     max-width: 400px;
-    text-align: center;
-    backdrop-filter: blur(5px); /* efecto vidrio */
-    position: relative;
-    top: -50px; /* se eleva sobre las butacas */
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-/* Hover suave */
-.login-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-}
-
-/* Título moderno */
-.login-container h2 {
-    margin-bottom: 25px;
-    font-size: 2rem;
-    color: #222;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-/* Inputs con estilo moderno */
-.form-control {
-    border-radius: 12px;
-    border: 1px solid #ccc;
-    padding: 12px 15px;
-    font-size: 1rem;
-    transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-/* Efecto focus */
-.form-control:focus {
-    border-color: #ff3d00;
-    box-shadow: 0 0 10px rgba(255, 61, 0, 0.3);
-    outline: none;
-}
-
-/* Botón principal */
-.btn-primary {
-    width: 100%;
-    padding: 12px;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    background-color: #ff3d00;
-    border: none;
-    color: #fff;
-    margin-top: 10px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.btn-primary:hover {
-    background-color: #e63600;
-    transform: translateY(-2px);
-}
-
-/* Enlaces debajo del botón */
-a {
-    display: block;
-    margin-top: 15px;
-    font-size: 0.95rem;
-    color: #555;
-    text-decoration: none;
-    transition: color 0.2s, text-decoration 0.2s;
-}
-
-a:hover {
-    color: #ff3d00;
-    text-decoration: underline;
-}
-
-/* Mensajes de error */
-#errorMessage {
-    margin-top: 15px;
-    padding: 10px 15px;
-    border-radius: 12px;
-    background-color: #ffe6e6;
-    color: #d9534f;
-    font-weight: 600;
-    font-size: 0.95rem;
-    display: none;
-}
-
-/* Texto de ayuda */
-.form-text {
-    color: #6c757d;
-    font-size: 0.85rem;
-    margin-top: 5px;
-}
-
-/* Estilo para párrafos de error */
-.parrafoError {
-    margin: 0;
-}
-
-/* ===================== */
-/* FORMULARIO REGISTRO HORIZONTAL - ALINEADO */
-.registro-container {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 30px 25px;
+    padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-    max-width: 850px;
-    width: 90%;
-    gap: 30px;
-    position: relative;
-    top: -80px; /* subimos el formulario sobre la sala */
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    color: white;
 }
 
-.registro-container h2 {
-    width: 100%;
+/* Registro más ancho */
+.registro-container {
+    max-width: 600px;
+}
+
+/* Títulos */
+h2 {
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.registro-left, .registro-right {
-    flex: 1;
-    min-width: 250px;
-}
-
-/* Alineamos labels e inputs vertical y horizontalmente */
-.registro-left .mb-3,
-.registro-right .mb-3 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 15px;
-}
-
-.registro-left .mb-3 label,
-.registro-right .mb-3 label {
-    width: 100%;
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-
-/* Para que el texto de ayuda no desplace nada */
-.form-text {
-    font-size: 0.85rem;
-    color: #6c757d;
-    margin-top: 3px;
-    margin-left: 0; /* asegurar alineación con input */
-}
-
-/* Contenedor del botón y enlace debajo de ambas columnas */
-.registro-actions {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 15px;
-}
-
-.registro-actions .btn-primary {
-    width: 50%;
-    max-width: 300px;
     margin-bottom: 10px;
 }
 
-.registro-actions a {
+.subtitle {
     text-align: center;
-    margin-top: 5px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 20px;
 }
+
+/* Inputs flotantes */
+.input-group-custom {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group-custom input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.input-group-custom label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #ccc;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+/* Animación label */
+.input-group-custom input:focus + label,
+.input-group-custom input:valid + label {
+    top: -8px;
+    font-size: 0.75rem;
+    color: #ff3d00;
+}
+
+/* Botón */
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #ff3d00;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #ff7300;
+    transform: translateY(-2px);
+}
+
+/* Link */
+.link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: white;
+}
+
+/* Error */
+#errorMessage {
+    margin-top: 15px;
+    background: rgba(255,0,0,0.2);
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+}
+
+/* Grid registro */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .side-panel {
+        height: 200px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
