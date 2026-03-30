@@ -4,7 +4,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>CineMax</title>
+    <title>MultiCines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="../public/website_icon3.png" rel="website icon" type="png">
@@ -19,7 +19,7 @@
 <body>
 
 <!-- LOADER -->
-<div id="loader">CineMax</div>
+<div id="loader">MultiCines</div>
 
 <!-- CURSOR -->
 <div class="cursor"></div>
@@ -30,7 +30,7 @@
 
     <!-- NAV -->
     <nav class="nav">
-        <h2 class="logo">CineMax</h2>
+        <h2 class="logo">MultiCines</h2>
         <div class="nav-buttons">
             <a href="../html/login.html" class="btn secondary">Iniciar sesión</a>
             <a href="../html/registro.html" class="btn primary">Registrarse</a>
