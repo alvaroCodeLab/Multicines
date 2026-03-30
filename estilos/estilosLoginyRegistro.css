@@ -6,14 +6,14 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
 /* Layout principal */
 .main-container {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* Panel izquierdo */
@@ -27,17 +27,18 @@ body {
     align-items: center;
     text-align: center;
 
-    padding: 40px;
+    padding: clamp(20px, 5vw, 40px);
 }
 
 .side-panel h1 {
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 5vw, 3rem);
     font-weight: 600;
 }
 
 .side-panel p {
     margin-top: 10px;
     opacity: 0.9;
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 /* Panel formulario */
@@ -46,14 +47,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 /* Caja tipo glass */
 .login-container,
 .registro-container {
-    width: 90%;
+    width: 100%;
     max-width: 400px;
-    padding: 40px;
+    padding: clamp(25px, 5vw, 40px);
     border-radius: 20px;
 
     background: rgba(255, 255, 255, 0.08);
@@ -72,6 +74,7 @@ body {
 h2 {
     text-align: center;
     margin-bottom: 10px;
+    font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 .subtitle {
@@ -96,6 +99,11 @@ h2 {
 
     background: rgba(255,255,255,0.1);
     color: white;
+}
+
+/* Mejora móvil (zoom iOS fix) */
+.input-group-custom input {
+    font-size: 16px;
 }
 
 .input-group-custom label {
@@ -140,6 +148,7 @@ h2 {
     margin-top: 15px;
     color: #ccc;
     text-decoration: none;
+    font-size: 0.9rem;
 }
 
 .link:hover {
@@ -162,18 +171,72 @@ h2 {
     gap: 15px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* 🔥 RESPONSIVE */
+
+/* Tablets */
+@media (max-width: 992px) {
     .main-container {
         flex-direction: column;
     }
 
     .side-panel {
-        height: 200px;
+        height: 220px;
+    }
+
+    .form-panel {
+        padding: 30px 20px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+    .side-panel {
+        height: 180px;
+        padding: 20px;
+    }
+
+    .side-panel h1 {
+        font-size: 1.6rem;
+    }
+
+    .side-panel p {
+        font-size: 0.85rem;
+    }
+
+    .login-container,
+    .registro-container {
+        border-radius: 15px;
+        padding: 25px 20px;
     }
 
     .grid {
         grid-template-columns: 1fr;
     }
+
+    .btn-primary {
+        padding: 14px;
+    }
 }
 
+/* Pantallas muy pequeñas */
+@media (max-width: 380px) {
+    .side-panel {
+        display: none; /* 🔥 estilo moderno tipo app */
+    }
+
+    .form-panel {
+        flex: 1;
+        width: 100%;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1400px) {
+    .login-container {
+        max-width: 450px;
+    }
+
+    .registro-container {
+        max-width: 700px;
+    }
+}
