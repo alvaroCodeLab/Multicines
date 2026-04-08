@@ -105,7 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (response.ok) {
-                window.location.href = '../html/login.html';
+                // 👉 Redirige a la pantalla de logout animada
+                window.location.href = '../php/logout.php';
             } else {
                 alert('Error al cerrar sesión');
             }

@@ -49,21 +49,37 @@ document.addEventListener('DOMContentLoaded', function () {
             };
 
             try {
-                // Envíar los datos al servidor usando fetch y espera la respuesta
-                const response = await fetch('../php/registro.php', requestOptions);
+              // Envíar los datos al servidor usando fetch y espera la respuesta
+              const response = await fetch(
+                "../php/registro.php",
+                requestOptions,
+              );
 
-                // Convierte la respuesta del servidor en un objeto JSON
-                const data = await response.json();
+              // Convierte la respuesta del servidor en un objeto JSON
+              const data = await response.json();
 
-                // Si el registro fue exitoso, redirige al usuario al index
-                if (data.success) {
-                    window.location.href = '../html/login.html';
-                } else {
-                    // Si hubo un error, muestra el mensaje del servidor
-                    errorMessage.textContent = data.message;
-                    errorMessage.style.display = 'block';
-                }
+              // Si el registro fue exitoso, redirige al usuario al index
+              if (data.success) {
+                const successMessage =
+                  document.getElementById("successMessage");
 
+                // Oculta errores si había
+                errorMessage.style.display = "none";
+
+                // Muestra mensaje de éxito
+                successMessage.textContent =
+                  "Registro completado correctamente. Redirigiendo al login...";
+                successMessage.style.display = "block";
+
+                // Espera 2 segundos antes de redirigir
+                setTimeout(() => {
+                  window.location.href = "../html/login.html";
+                }, 2000);
+              } else {
+                // Si hubo un error, muestra el mensaje del servidor
+                errorMessage.textContent = data.message;
+                errorMessage.style.display = "block";
+              }
             } catch (error) {
                 // Captura errores de red u otros problemas inesperados
                 console.log('Ha ocurrido un error: ', error);
