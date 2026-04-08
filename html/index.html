@@ -15,17 +15,24 @@
 <body>
     <header class="header bg-dark text-white p-3">
         <div class="d-flex justify-content-between align-items-center container">
+    
             <div class="header-logo_cine">
                 <a href="index.html" class="text-white text-decoration-none fs-4">🎬 Taquilla.com</a>
             </div>
-            <form class="d-flex" id="buscador_form_cine"
-                action="http://localhost/Proyecto%20Multicines/index.html/search/entities/">
-                <input class="form-control me-2" type="text" id="buscador_field_cine" name="t10q" autocomplete="off"
-                    placeholder="Película / Cine">
-                <button class="btn btn-outline-light" type="submit">Buscar</button>
-            </form>
-            <!-- Botón de Cerrar Sesión -->
-            <a href="#" id="cerrarSesion" class="btn btn-outline-light ms-3">Cerrar sesión</a>
+    
+            <!-- 🔥 BOTÓN HAMBURGUESA (NUEVO) -->
+            <div id="menuToggle" class="menu-toggle">☰</div>
+    
+            <!-- 🔥 ENVOLVEMOS ESTO -->
+            <div class="nav-wrapper" id="navWrapper">
+                <form class="d-flex" id="buscador_form_cine">
+                    <input class="form-control me-2" type="text" placeholder="Película / Cine">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+    
+                <a href="#" id="cerrarSesion" class="btn btn-outline-light ms-3">Cerrar sesión</a>
+            </div>
+    
         </div>
     </header>
 
@@ -47,6 +54,7 @@
         &copy; 2025 Taquilla.com - Todos los derechos reservados.
     </footer>
     <script src="../js/cartelera.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </body>
 
 </html>

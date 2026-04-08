@@ -239,3 +239,60 @@ footer {
 #cerrarSesion:active {
     animation: rebote 0.4s ease-in-out; /* Repite la animación durante 0.4 segundos */
 }
+
+/* HAMBURGUESA OCULTA EN DESKTOP */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* NAV WRAPPER NORMAL (DESKTOP = igual) */
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* 📱 SOLO MÓVIL */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* ocultamos menu */
+    .nav-wrapper {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #111;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+
+        display: none; /* 🔥 clave */
+    }
+
+    .nav-wrapper.active {
+        display: flex;
+    }
+
+    /* buscador full width */
+    #buscador_form_cine {
+        width: 100%;
+    }
+
+    #buscador_form_cine input {
+        width: 100%;
+    }
+
+    /* botón ancho completo */
+    #cerrarSesion {
+        width: 100%;
+        text-align: center;
+        margin-left: 0 !important;
+    }
+}

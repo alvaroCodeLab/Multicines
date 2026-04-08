@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // MENÚ HAMBURGUESA
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navWrapper');
+
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+
+        // Animación con GSAP
+        if (nav.classList.contains('active')) {
+            gsap.from("#navWrapper > *", {
+                opacity: 0,
+                y: -20,
+                stagger: 0.1
+            });
+        }
+    });
+
     // Mostrar el loader al iniciar la carga de películas
     const loader = document.getElementById('loader');
 
