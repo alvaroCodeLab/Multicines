@@ -355,3 +355,23 @@ footer {
         width: 100%;
     }
 }
+
+/* Botón volver alineado bonito */
+header .btn {
+    border-radius: 0.375rem; /* mismo estilo Bootstrap */
+    font-weight: 500;
+}
+
+/* Ajuste móvil */
+@media (max-width: 576px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+}
+
+/* Botón volver mismo efecto que buscar */
+header .btn-outline-light:hover {
+    background-color: #00e6e6;
+    color: #000 !important;
+    transform: scale(1.05);
+}

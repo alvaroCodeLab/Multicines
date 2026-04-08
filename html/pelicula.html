@@ -24,40 +24,19 @@
 
     <!-- HEADER NUEVO -->
     <header class="header bg-dark text-white">
-        <nav class="navbar navbar-expand-lg navbar-dark container">
-
-            <!-- Botón volver -->
-            <a href="index.html" class="btn btn-outline-light me-2">
-                <i class="fas fa-arrow-left"></i>
-            </a>
-
-            <!-- Logo -->
-            <a class="navbar-brand fw-bold text-white" href="index.html">
+        <nav class="navbar container d-flex justify-content-between align-items-center">
+    
+            <!-- IZQUIERDA: Logo -->
+            <a class="navbar-brand fw-bold text-white m-0" href="index.html">
                 🎬 Taquilla.com
             </a>
-
-            <!-- Hamburguesa -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarContenido">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Contenido -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarContenido">
-
-                <form class="d-flex mt-3 mt-lg-0" id="buscador_form_cine"
-                    action="http://localhost/Proyecto%20Multicines/index.html/search/entities/">
-
-                    <input class="form-control me-2" type="text" id="buscador_field_cine"
-                        name="t10q" autocomplete="off"
-                        placeholder="Película / Cine">
-
-                    <button class="btn btn-outline-light" type="submit">
-                        Buscar
-                    </button>
-                </form>
-
-            </div>
+    
+            <!-- DERECHA: Botón volver -->
+            <a href="index.html" class="btn btn-outline-light d-flex align-items-center gap-2">
+                <i class="fas fa-arrow-left"></i>
+                <span class="d-none d-md-inline">Volver</span>
+            </a>
+    
         </nav>
     </header>
 
