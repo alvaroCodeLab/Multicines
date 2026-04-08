@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (data.tipo === 'admin') {
                         window.location.href = '../html/panelAdministracion.html';
                     } else if (data.tipo === 'cliente') {
-                        window.location.href = '../html/index.html';
+                        window.location.href = '../html/GUI.html';
                     }
                 }
                 else {
