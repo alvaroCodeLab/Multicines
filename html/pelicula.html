@@ -6,69 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles de Película</title>
     <link href="../public/website_icon3.png" rel="website icon" type="png">
-    <!-- Enlace a Bootstrap CSS -->
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fuente -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link href="../estilos/estilosPelicula.css" rel="stylesheet">
+
+    <!-- Iconos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <!-- Para iconos -->
 </head>
 
 <body>
-    <header class="header bg-dark text-white p-3">
-        <div class="d-flex justify-content-between align-items-center container">
-            <div class="header-logo_cine">
-                <a href="index.html" class="text-white text-decoration-none fs-4">🎬 Taquilla.com</a>
+
+    <!-- HEADER NUEVO -->
+    <header class="header bg-dark text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+
+            <!-- Botón volver -->
+            <a href="index.html" class="btn btn-outline-light me-2">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold text-white" href="index.html">
+                🎬 Taquilla.com
+            </a>
+
+            <!-- Hamburguesa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContenido">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Contenido -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarContenido">
+
+                <form class="d-flex mt-3 mt-lg-0" id="buscador_form_cine"
+                    action="http://localhost/Proyecto%20Multicines/index.html/search/entities/">
+
+                    <input class="form-control me-2" type="text" id="buscador_field_cine"
+                        name="t10q" autocomplete="off"
+                        placeholder="Película / Cine">
+
+                    <button class="btn btn-outline-light" type="submit">
+                        Buscar
+                    </button>
+                </form>
+
             </div>
-            <form class="d-flex" id="buscador_form_cine"
-                action="http://localhost/Proyecto%20Multicines/index.html/search/entities/">
-                <input class="form-control me-2" type="text" id="buscador_field_cine" name="t10q" autocomplete="off"
-                    placeholder="Película / Cine">
-                <button class="btn btn-outline-light" type="submit">Buscar</button>
-            </form>
-        </div>
+        </nav>
     </header>
 
+    <!-- CONTENIDO -->
     <main class="container mt-5 mb-5" id="detallePelicula">
-        <!-- Spinner que se muestra mientras se cargan los datos -->
+
         <div id="spinner" class="d-flex justify-content-center align-items-center" style="height: 300px;">
             <div class="spinner-border text-info" role="status">
                 <span class="visually-hidden">Cargando...</span>
             </div>
         </div>
-        <!-- Los detalles de la película se cargarán dinámicamente -->
+
     </main>
 
-    <!-- Modal de confirmación de compra -->
-    <div class="modal fade" id="modalCompra" tabindex="-1" aria-labelledby="modalCompraLabel" aria-hidden="true">
+    <!-- MODAL -->
+    <div class="modal fade" id="modalCompra" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
+
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalCompraLabel">Confirmar Compra</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title">Confirmar Compra</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
+
                 <div class="modal-body">
                     <p><strong>¿Cuántas entradas deseas comprar?</strong></p>
                     <input type="number" id="numEntradas" class="form-control" min="1" required>
-                    <div id="errorCompra" class="alert alert-danger mt-2" role="alert" style="display: none;">
+
+                    <div id="errorCompra" class="alert alert-danger mt-2" style="display: none;">
                         Número de entradas inválido o insuficientes.
                     </div>
                 </div>
+
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" id="confirmarCompraBtn" disabled>Confirmar
-                        Compra</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Cerrar
+                    </button>
+                    <button type="button" class="btn btn-primary" id="confirmarCompraBtn" disabled>
+                        Confirmar Compra
+                    </button>
                 </div>
+
             </div>
         </div>
     </div>
 
+    <!-- FOOTER -->
     <footer class="bg-dark text-white text-center p-3 mt-5">
         &copy; 2025 Taquilla.com - Todos los derechos reservados.
     </footer>
 
+    <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/pelicula.js"></script>
-</body>
 
+</body>
 </html>
